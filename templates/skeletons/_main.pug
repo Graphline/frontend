@@ -1,0 +1,27 @@
+doctype html
+
+html
+  head
+    block head
+      title 
+        block title
+          | Graphline - Main skeleton
+
+      block meta
+        meta(
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+        )
+
+      block context
+        script(type="text/javascript").
+          window.context = #{context || '{}'}
+  
+  body
+    block header
+    block body
+      h1 Skeleton!
+    block footer
+
+    block styles
+    block scripts

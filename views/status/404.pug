@@ -1,0 +1,13 @@
+extends ../../templates/skeletons/bulma
+
+block title
+  | Not found
+
+block body
+  .container
+    .section
+      .content
+        h1 #{req.path} was not found
+        hr
+
+        p This content was not found on our server.

@@ -3,6 +3,7 @@ import http from 'http'
 import routes from '~/express/routes'
 import {log,} from 'lib/logger'
 import {check,} from 'lib/environment-checks'
+import path from 'path'
 
 check()
 
@@ -23,6 +24,9 @@ const init = async () => {
   log.info('beginning startup')
 
   const app = express()
+
+  app.set('view engine', process.env.VIEW_ENGINE)
+  app.set('views', path.resolve('./'))
 
   server = http.createServer(app)
   log.debug('attaching routes')
