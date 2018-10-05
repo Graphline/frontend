@@ -1,5 +1,7 @@
 doctype html
 
+include ../fixtures/ie-classes
+
 html
   head
     block head
@@ -17,7 +19,7 @@ html
         script(type="text/javascript").
           window.context = #{context || '{}'}
   
-  body
+  +body
     block header
     block body
       h1 Skeleton!

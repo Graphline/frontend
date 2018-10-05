@@ -1,0 +1,14 @@
+extends ../templates/skeletons/bulma
+
+block title
+  if data.slug
+    | #{data.slug.entry.display}
+  else
+    | Post
+
+block body
+  .container
+    .section
+      if data.slug
+        .content
+          | !{data.slug.entry.content}

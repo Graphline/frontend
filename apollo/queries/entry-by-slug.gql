@@ -1,0 +1,12 @@
+query entryBySlug($slug: String!) {
+  slug(where: {
+    value: $slug
+  }) {
+    id
+    entry {
+      id
+      display
+      content
+    }
+  }
+}

@@ -81,7 +81,7 @@ const config = {
   'module': {
     'rules': [
       {
-        'test':   /\.graphql$/,
+        'test':   /\.gql/,
         'loader': require.resolve('graphql-tag/loader'),
       },
       {
